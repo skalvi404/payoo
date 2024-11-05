@@ -9,7 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-black">
   <main class="flex justify-center">
     <div class="mockup-phone">
       <div class="camera"></div>
@@ -26,63 +26,84 @@
           <div class="divider"></div>
 
           <!-- user acction button -->
-          <div class="add-money">
+          <div class="add-money grid grid-cols-2 gap-2">
             <button id="show-add-money" class="btn btn-lg">Add Money</button>
             <button id="show-cash-out" class="btn btn-lg">Cash Out</button>
+            <button id="show-transection" class="btn btn-lg">Transection</button>
+            <button id="show-bank" class="btn btn-lg">Bank</button>
+
           </div>
           <div class="divider"></div>
 
-<!-- add money form start -->
-<div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-  <form class="card-body">
-    <div class="form-control">
-      <label class="label">
-        <span class="label-text">Ammount</span>
-      </label>
-      <input id="add-money-input-id" type="number" placeholder="Add Ammount" class="input input-bordered" autocomplete="off" required />
-    </div>
-    <div class="form-control">
-      <label class="label">
-        <span class="label-text">Pin</span>
-      </label>
-      <input id="input-pin-id" type="number"  placeholder="Pin Number" class="input input-bordered" autocomplete="off" required />
-    </div>
-    <div class="form-control mt-6">
-      <button id="btn-add-money" class="btn btn-primary">Add Money</button>
-    </div>
-  </form>
-</div>
-<!-- add money form end -->
+          <!-- add money form start -->
+          <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Ammount</span>
+                </label>
+                <input id="add-money-input-id" type="number" placeholder="Add Ammount" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="input-pin-id" type="number" placeholder="Pin Number" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- add money form end -->
 
-<!-- Cash Out Money From Start -->
-<div id="cash-out-from" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-  <form class="card-body">
-    <div class="form-control">
-      <label class="label">
-        <span class="label-text">Ammount</span>
-      </label>
-      <input id="cashout-money-input-id" type="number" placeholder="Cash OUT Ammount" class="input input-bordered" autocomplete="off" required />
-    </div>
-    <div class="form-control">
-      <label class="label">
-        <span class="label-text">Pin</span>
-      </label>
-      <input id="cashout-input-pin-id" type="number"  placeholder="Pin Number" class="input input-bordered" autocomplete="off" required />
-    </div>
-    <div class="form-control mt-6">
-      <button id="btn-cashout-money" class="btn btn-primary">Cash Out</button>
-    </div>
-  </form>
-</div>
-<!-- Cash Out Money From Start -->
+          <!-- Cash Out Money From Start -->
+          <div id="cash-out-from"  class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Ammount</span>
+                </label>
+                <input id="cashout-money-input-id" type="number" placeholder="Cash OUT Ammount"
+                  class="input input-bordered" autocomplete="off" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="cashout-input-pin-id" type="number" placeholder="Pin Number" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-cashout-money" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+          <!-- Cash Out Money From End -->
+
+          <!-- Transection From start -->
+          <div id="Transeciton-Form" class="hidden">
+            <h1>This is Transeciton From</h1>
+          </div>
+          <!-- Transection From end -->
+
+          <!-- Bank From start -->
+
+          <div id="Bank-Form" class="hidden">
+            <h1>This is bank From</h1>
+          </div>
+          <!-- Bank From End -->
         </div>
       </div>
     </div>
 
   </main>
-<script src="features.js"></script>
-<script src="addmoney.js"></script>
- <script src="cashout.js"></script>
+  <script src="utilities.js"></script>
+  <script src="features.js"></script>
+  <script src="addmoney.js"></script>
+  <script src="cashout.js"></script>
 </body>
 
 </html>
